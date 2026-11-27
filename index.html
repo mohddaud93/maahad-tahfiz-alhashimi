@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maahad Tahfiz Alhashimi | معهد تحفيظ الهاشمي — Gedung Ilmu & Cahaya Al-Quran</title>
+  <meta name="description" content="Laman web rasmi Maahad Tahfiz Alhashimi — Institusi Tahfiz Al-Quran 30 Juzuk Bersanad, Pengajian Turath, dan Kecemerlangan Akademik & STEM." />
+
+  <!-- Google Fonts: Playfair Display (Tajuk Editorial), Plus Jakarta Sans (Teks Utama & UI), Amiri & Noto Naskh Arabic (Tulisan Arab) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emeraldDeep: '#102D25',
+            emeraldMid: '#173E33',
+            royalGold: '#C6A568',
+            goldLight: '#DFC48E',
+            warmIvory: '#F5F1E6',
+            ivorySoft: '#FAF8F3',
+            midnightNavy: '#101C2B',
+            walnutBrown: '#745238',
+          },
+          fontFamily: {
+            editorial: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            arabic: ['"Amiri"', '"Noto Naskh Arabic"', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM: WARM IVORY EDITORIAL + DEEP EMERALD & ROYAL GOLD ACCENTS
+       ========================================================================== */
+    :root {
+      --color-emerald: #102D25;
+      --color-gold: #C6A568;
+      --color-ivory: #F5F1E6;
+      --color-navy: #101C2B;
+      --color-walnut: #745238;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #F5F1E6;
+      color: #102D25;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F5F1E6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #745238;
+    }
+
+    /* Arabic Typography */
+    .arabic-script {
+      font-family: 'Amiri', 'Noto Naskh Arabic', serif;
+      line-height: 1.95;
+      letter-spacing: 0;
+    }
+
+    /* Subtle Geometric Islamic Lattice Watermark */
+    .islamic-lattice-light {
+      background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23745238' stroke-width='0.6' stroke-opacity='0.09'%3E%3Cpath d='M32 0 L64 32 L32 64 L0 32 Z'/%3E%3Crect x='10' y='10' width='44' height='44'/%3E%3Ccircle cx='32' cy='32' r='12'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .islamic-lattice-dark {
+      background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C6A568' stroke-width='0.6' stroke-opacity='0.14'%3E%3Cpath d='M32 0 L64 32 L32 64 L0 32 Z'/%3E%3Crect x='10' y='10' width='44' height='44'/%3E%3Ccircle cx='32' cy='32' r='12'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Architectural Corner Frame */
+    .editorial-frame {
+      position: relative;
+      border: 1px solid rgba(198, 165, 104, 0.42);
+    }
+    .editorial-frame::before,
+    .editorial-frame::after {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-color: #C6A568;
+      pointer-events: none;
+    }
+    .editorial-frame::before {
+      top: -1px;
+      left: -1px;
+      border-top: 2px solid #C6A568;
+      border-left: 2px solid #C6A568;
+    }
+    .editorial-frame::after {
+      bottom: -1px;
+      right: -1px;
+      border-bottom: 2px solid #C6A568;
+      border-right: 2px solid #C6A568;
+    }
+
+    /* Gentle Cinematic Zoom on Hero Photography */
+    @keyframes slowKenBurns {
+      0% { transform: scale(1.0); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1.0); }
+    }
+    .hero-photo-motion {
+      animation: slowKenBurns 26s ease-in-out infinite;
+    }
+
+    /* Buttons */
+    .btn-gold {
+      background-color: #C6A568;
+      color: #102D25;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      background-color: #DFC48E;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px -5px rgba(198, 165, 104, 0.45);
+    }
+
+    .btn-emerald {
+      background-color: #102D25;
+      color: #F5F1E6;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      transition: all 0.3s ease;
+    }
+    .btn-emerald:hover {
+      background-color: #173E33;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px -5px rgba(16, 45, 37, 0.3);
+    }
+
+    /* Smooth Scroll Reveal */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+    }
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-photo-motion { animation: none !important; }
+      .reveal-on-scroll { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body class="selection:bg-royalGold selection:text-emeraldDeep">
+
+  <!-- ========================================================================
+       1. TOP INSTITUTIONAL ANNOUNCEMENT BAR
+       ======================================================================== -->
+  <div class="bg-midnightNavy text-warmIvory text-xs py-2.5 px-4 border-b border-royalGold/25">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center justify-center sm:justify-start gap-2.5">
+        <span class="inline-block w-2 h-2 rounded-full bg-royalGold"></span>
+        <span data-i18n="topbar_notice">Pendaftaran Pelajar Baharu Sesi 2027 Kini Dibuka (Tingkatan 1 – Tingkatan 5) · Biasiswa Asnaf &amp; Merit Disediakan</span>
+      </div>
+      <div class="flex items-center gap-4 text-royalGold font-medium shrink-0">
+        <a href="tel:+60389254410" class="hover:underline">☎ 03-8925 4410</a>
+        <span>|</span>
+        <button type="button" onclick="openModal('modal-visit')" class="hover:underline" data-i18n="topbar_visit">Tempah Lawatan Kampus</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. MAIN NAVIGATION HEADER (STICKY, CLEAN & RESPONSIVE)
+       ======================================================================== -->
+  <header class="sticky top-0 z-40 bg-ivorySoft/95 backdrop-blur-md border-b border-walnutBrown/15 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between gap-4">
+      <!-- School Logo & Arabic Title -->
+      <a href="#utama" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 bg-emeraldDeep border border-royalGold flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-royalGold" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+            <rect x="22" y="22" width="56" height="56" stroke="currentColor" stroke-width="3.5" />
+            <rect x="22" y="22" width="56" height="56" transform="rotate(45 50 50)" stroke="currentColor" stroke-width="3.5" />
+            <circle cx="50" cy="50" r="10" fill="currentColor" />
+          </svg>
+        </div>
+        <div>
+          <span class="block arabic-script text-lg sm:text-xl text-walnutBrown leading-none font-bold" lang="ar" dir="rtl">معهد تحفيظ الهاشمي</span>
+          <span class="block font-editorial text-sm sm:text-base font-bold tracking-wider uppercase text-emeraldDeep mt-1">Maahad Tahfiz Alhashimi</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-widest text-emeraldDeep/85" aria-label="Navigasi Utama">
+        <a href="#tentang-kami" class="hover:text-walnutBrown transition-colors" data-i18n="nav_about">Tentang Kami</a>
+        <a href="#kurikulum" class="hover:text-walnutBrown transition-colors" data-i18n="nav_curriculum">Kurikulum</a>
+        <a href="#fasiliti" class="hover:text-walnutBrown transition-colors" data-i18n="nav_facilities">Fasiliti Kampus</a>
+        <a href="#testimoni" class="hover:text-walnutBrown transition-colors" data-i18n="nav_testimonials">Testimoni</a>
+        <a href="#yuran-kemasukan" class="hover:text-walnutBrown transition-colors" data-i18n="nav_admissions">Yuran &amp; Kemasukan</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="flex items-center gap-2.5">
+        <!-- Language Switcher BM / EN -->
+        <button
+          id="btn-lang"
+          type="button"
+          onclick="toggleLanguage()"
+          class="px-3 py-2 border border-emeraldDeep/25 hover:border-emeraldDeep text-emeraldDeep font-semibold text-xs tracking-wider uppercase transition-colors min-h-[40px]"
+          aria-label="Tukar Bahasa Melayu / English"
+        >
+          BM / EN
+        </button>
+
+        <!-- Primary Apply Button -->
+        <button
+          type="button"
+          onclick="openModal('modal-apply')"
+          class="btn-emerald px-4 sm:px-5 py-2.5 text-xs uppercase rounded-sm min-h-[40px]"
+          data-i18n="nav_cta"
+        >
+          Mohon 2027
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          id="btn-mobile-menu"
+          type="button"
+          onclick="toggleMobileMenu()"
+          class="lg:hidden p-2 border border-emeraldDeep/25 text-emeraldDeep min-w-[40px] min-h-[40px] flex items-center justify-center"
+          aria-label="Buka Menu"
+        >
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-warmIvory border-t border-walnutBrown/15 px-6 py-4 space-y-3 text-sm font-semibold text-emeraldDeep">
+      <a href="#tentang-kami" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-walnutBrown" data-i18n="nav_about">Tentang Kami</a>
+      <a href="#kurikulum" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-walnutBrown" data-i18n="nav_curriculum">Kurikulum &amp; Hafazan</a>
+      <a href="#fasiliti" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-walnutBrown" data-i18n="nav_facilities">Fasiliti &amp; Kehidupan Kampus</a>
+      <a href="#testimoni" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-walnutBrown" data-i18n="nav_testimonials">Suara Ibu Bapa &amp; Alumni</a>
+      <a href="#yuran-kemasukan" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-walnutBrown" data-i18n="nav_admissions">Yuran, Biasiswa &amp; Kemasukan</a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       3. HERO SECTION: REAL ARCHITECTURAL & QURANIC SANCTUARY PHOTOGRAPHY
+       ======================================================================== -->
+  <section id="utama" class="relative min-h-[86vh] flex items-center overflow-hidden bg-emeraldDeep text-warmIvory">
+    <!-- Real High-Resolution Islamic Courtyard & Archway Photography -->
+    <img
+      src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1920&q=85"
+      onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/102D25/C6A568?text=Maahad+Tahfiz+Alhashimi';"
+      alt="Laman seni bina Islam dan gerbang ilmu Maahad Tahfiz Alhashimi"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-45 hero-photo-motion"
+    />
+    <!-- Rich Editorial Gradient Overlay for High Readability -->
+    <div class="absolute inset-0 bg-gradient-to-r from-emeraldDeep/95 via-emeraldDeep/82 to-midnightNavy/60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 py-20 lg:py-28 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Content -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-royalGold/15 border border-royalGold/40 text-royalGold text-xs font-semibold uppercase tracking-widest mb-6">
+            <span>★</span>
+            <span data-i18n="hero_badge">Institusi Tahfiz Bertauliah · Berdaftar JAIS &amp; KPM</span>
+          </div>
+
+          <p class="arabic-script text-3xl sm:text-4xl md:text-5xl text-royalGold mb-3" lang="ar" dir="rtl">
+            مَعْهَدُ تَحْفِيظِ الْهَاشِمِي
+          </p>
+
+          <h1 class="font-editorial text-4xl sm:text-5xl md:text-6xl font-bold text-warmIvory leading-[1.12] mb-6" data-i18n="hero_title">
+            Melahirkan Generasi Huffaz Profesional &amp; Berakhlak Mulia
+          </h1>
+
+          <p class="text-warmIvory/90 text-base sm:text-lg leading-relaxed max-w-2xl mb-8 font-light" data-i18n="hero_desc">
+            Gabungan pendidikan hafazan 30 Juzuk Al-Quran bersanad, pengajian kitab Turath, dan aliran akademik arus perdana (SPM / STEM) dalam persekitaran kampus yang tenang, selamat, dan penuh kasih sayang.
+          </p>
+
+          <!-- Quranic Verse Banner -->
+          <div class="border-l-2 border-royalGold pl-5 py-2.5 mb-9 bg-midnightNavy/45 max-w-xl">
+            <p class="arabic-script text-xl sm:text-2xl text-warmIvory mb-1" lang="ar" dir="rtl">
+              ﴿ إِنَّ هَـٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ ﴾
+            </p>
+            <p class="text-xs sm:text-sm italic font-editorial text-goldLight" data-i18n="hero_verse">
+              “Sesungguhnya Al-Quran ini memberi petunjuk ke jalan yang amat betul.” — Surah Al-Isra (17:9)
+            </p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4">
+            <button type="button" onclick="openModal('modal-apply')" class="btn-gold px-7 py-4 text-xs uppercase rounded-sm shadow-lg" data-i18n="hero_btn_apply">
+              Daftar Kemasukan 2027
+            </button>
+            <a href="#fasiliti" class="px-7 py-4 border border-warmIvory/45 hover:border-royalGold hover:text-royalGold text-warmIvory text-xs font-semibold uppercase tracking-widest transition-colors rounded-sm" data-i18n="hero_btn_tour">
+              Lihat Fasiliti &amp; Kampus
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Editorial Photo Card (Real Quran Recitation) -->
+        <div class="lg:col-span-5">
+          <div class="editorial-frame bg-midnightNavy/75 p-3 sm:p-4 shadow-2xl">
+            <div class="relative overflow-hidden aspect-[4/3]">
+              <img
+                src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1000&q=85"
+                onerror="this.onerror=null;this.src='https://placehold.co/1000x750/101C2B/C6A568?text=Halaqah+Al-Quran+Bersanad';"
+                alt="Mushaf Al-Quran di atas rehal kayu dalam sesi halaqah"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-midnightNavy via-midnightNavy/75 to-transparent p-4">
+                <span class="text-[11px] uppercase tracking-widest text-royalGold font-semibold block">Sistem Talaqqi Musyafahah</span>
+                <p class="font-editorial text-lg text-warmIvory">Bimbingan Peribadi 1 Guru : 10 Pelajar</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 divide-x divide-royalGold/25 pt-4 pb-1 text-center">
+              <div>
+                <span class="block font-editorial text-2xl font-bold text-royalGold">30 Juzuk</span>
+                <span class="text-[11px] text-warmIvory/75 uppercase tracking-wider" data-i18n="stat_1">Hafazan Bersanad</span>
+              </div>
+              <div>
+                <span class="block font-editorial text-2xl font-bold text-royalGold">98.4%</span>
+                <span class="text-[11px] text-warmIvory/75 uppercase tracking-wider" data-i18n="stat_2">Lulus Syahadah &amp; SPM</span>
+              </div>
+              <div>
+                <span class="block font-editorial text-2xl font-bold text-royalGold">14+ Thn</span>
+                <span class="text-[11px] text-warmIvory/75 uppercase tracking-wider" data-i18n="stat_3">Pengalaman Mendidik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. TENTANG KAMI & WARKAH AL-FADHIL MUDIR (TRUST & AUTHENTICITY)
+       ======================================================================== -->
+  <section id="tentang-kami" class="py-20 lg:py-28 px-4 sm:px-8 islamic-lattice-light">
+    <div class="max-w-7xl mx-auto reveal-on-scroll">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Photo Collage -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="editorial-frame bg-white p-2.5 shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1000&q=85"
+              onerror="this.onerror=null;this.src='https://placehold.co/1000x700/102D25/F5F1E6?text=Dewan+Solat+%26+Halaqah';"
+              alt="Dewan solat dan halaqah utama Maahad Tahfiz Alhashimi"
+              class="w-full h-72 sm:h-80 object-cover"
+            />
+          </div>
+          <div class="bg-emeraldDeep text-warmIvory p-6 border-l-4 border-royalGold shadow-md">
+            <p class="font-editorial italic text-lg sm:text-xl leading-relaxed mb-3" data-i18n="mudir_quote">
+              “Kami mendidik anak-anak bukan sekadar untuk menghafaz ayat suci di ingatan, tetapi membentuk keperibadian agar Al-Quran terpancar pada akhlak, disiplin, dan kecemerlangan akademik mereka.”
+            </p>
+            <div class="flex items-center justify-between pt-3 border-t border-royalGold/25">
+              <div>
+                <p class="font-semibold text-royalGold text-sm">Al-Fadhil Ustaz Dato’ Hj. Ahmad Alhashimi</p>
+                <p class="text-xs text-warmIvory/75" data-i18n="mudir_title">Mudir &amp; Pengerusi Majlis Akademik</p>
+              </div>
+              <span class="arabic-script text-xl text-royalGold" lang="ar" dir="rtl">المدير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Institutional Narrative & Why Parents Choose Us -->
+        <div class="lg:col-span-7">
+          <span class="text-xs font-bold uppercase tracking-[0.22em] text-walnutBrown block mb-2" data-i18n="about_eyebrow">
+            Tentang Maahad Tahfiz Alhashimi
+          </span>
+          <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-bold text-emeraldDeep leading-tight mb-6" data-i18n="about_heading">
+            Kenapa Ibu Bapa Mempercayai Pendidikan Kami?
+          </h2>
+          <p class="text-emeraldDeep/85 text-base leading-relaxed mb-8" data-i18n="about_p1">
+            Ditubuhkan sejak tahun 2012, Maahad Tahfiz Alhashimi komited menyediakan ekosistem pendidikan Islam bersepadu. Kami memahami kebimbangan ibu bapa moden: mahukan anak yang hafiz Al-Quran dan teguh jati diri Islamnya, namun dalam masa yang sama mempunyai kelayakan akademik yang kukuh untuk melangkah ke menara gading.
+          </p>
+
+          <!-- 4 Key Value Pillars -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="bg-white p-6 border border-walnutBrown/15 shadow-sm hover:border-royalGold transition-colors">
+              <div class="w-10 h-10 bg-emeraldDeep text-royalGold flex items-center justify-center font-editorial font-bold text-lg mb-3">01</div>
+              <h3 class="font-editorial text-xl font-bold text-emeraldDeep mb-1.5" data-i18n="why1_t">Sanad Al-Quran Bersambung</h3>
+              <p class="text-xs sm:text-sm text-emeraldDeep/75 leading-relaxed" data-i18n="why1_d">Semakan bacaan harian (Talaqqi) bersama barisan asatizah huffaz bertauliah yang memiliki sanad bacaan sahih sehingga Rasulullah SAW.</p>
+            </div>
+
+            <div class="bg-white p-6 border border-walnutBrown/15 shadow-sm hover:border-royalGold transition-colors">
+              <div class="w-10 h-10 bg-emeraldDeep text-royalGold flex items-center justify-center font-editorial font-bold text-lg mb-3">02</div>
+              <h3 class="font-editorial text-xl font-bold text-emeraldDeep mb-1.5" data-i18n="why2_t">Aliran Akademik &amp; SPM</h3>
+              <p class="text-xs sm:text-sm text-emeraldDeep/75 leading-relaxed" data-i18n="why2_d">Mengikuti silibus kebangsaan (KSSM) termasuk Sains Tulen, Matematik Tambahan, Bahasa Inggeris, dan Bahasa Arab Tinggi.</p>
+            </div>
+
+            <div class="bg-white p-6 border border-walnutBrown/15 shadow-sm hover:border-royalGold transition-colors">
+              <div class="w-10 h-10 bg-emeraldDeep text-royalGold flex items-center justify-center font-editorial font-bold text-lg mb-3">03</div>
+              <h3 class="font-editorial text-xl font-bold text-emeraldDeep mb-1.5" data-i18n="why3_t">Pembentukan Adab &amp; Sahsiah</h3>
+              <p class="text-xs sm:text-sm text-emeraldDeep/75 leading-relaxed" data-i18n="why3_d">Bimbingan warden sepenuh masa, solat berjemaah 5 waktu, qiyamullail, serta latihan kepimpinan dan khutbah Jumaat.</p>
+            </div>
+
+            <div class="bg-white p-6 border border-walnutBrown/15 shadow-sm hover:border-royalGold transition-colors">
+              <div class="w-10 h-10 bg-emeraldDeep text-royalGold flex items-center justify-center font-editorial font-bold text-lg mb-3">04</div>
+              <h3 class="font-editorial text-xl font-bold text-emeraldDeep mb-1.5" data-i18n="why4_t">Laporan Kemajuan Berkala</h3>
+              <p class="text-xs sm:text-sm text-emeraldDeep/75 leading-relaxed" data-i18n="why4_d">Ibu bapa menerima rekod hafazan mingguan (Sabak, Para-Sabak, Manzil) serta sesi konsultasi akademik setiap penggal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. KURIKULUM BERSEPADU & PELAN PERJALANAN 5 TAHUN (INTERACTIVE)
+       ======================================================================== -->
+  <section id="kurikulum" class="py-20 lg:py-28 px-4 sm:px-8 bg-emeraldDeep text-warmIvory islamic-lattice-dark">
+    <div class="max-w-7xl mx-auto reveal-on-scroll">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-[0.24em] text-royalGold block mb-2" data-i18n="curr_eyebrow">
+          Kurikulum Bersepadu Dwi-Aliran
+        </span>
+        <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-bold text-warmIvory mb-4" data-i18n="curr_heading">
+          Tiga Teras Pembentukan &amp; Pelan 5 Tahun
+        </h2>
+        <p class="text-warmIvory/80 text-sm sm:text-base leading-relaxed" data-i18n="curr_sub">
+          Susunan pembelajaran yang seimbang supaya pelajar tidak terbeban, malah mampu mengkhatamkan 30 Juzuk dengan mantap sebelum menduduki peperiksaan SPM.
+        </p>
+      </div>
+
+      <!-- Interactive 3-Pillar Tabs -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8" role="tablist">
+        <button type="button" onclick="selectPillar(0)" id="tab-pillar-0" class="pillar-btn text-left p-5 border border-royalGold bg-royalGold/15 transition-all">
+          <span class="block text-[11px] uppercase tracking-widest text-royalGold mb-1">Teras 01 · الحفظ والقراءات</span>
+          <span class="font-editorial text-xl font-bold text-warmIvory" data-i18n="p1_title">Tahfiz Al-Quran &amp; Tajwid</span>
+        </button>
+
+        <button type="button" onclick="selectPillar(1)" id="tab-pillar-1" class="pillar-btn text-left p-5 border border-royalGold/30 hover:border-royalGold bg-midnightNavy/40 transition-all">
+          <span class="block text-[11px] uppercase tracking-widest text-royalGold mb-1">Teras 02 · العلوم الشرعية</span>
+          <span class="font-editorial text-xl font-bold text-warmIvory" data-i18n="p2_title">Ulum Syar’iyyah &amp; Bahasa Arab</span>
+        </button>
+
+        <button type="button" onclick="selectPillar(2)" id="tab-pillar-2" class="pillar-btn text-left p-5 border border-royalGold/30 hover:border-royalGold bg-midnightNavy/40 transition-all">
+          <span class="block text-[11px] uppercase tracking-widest text-royalGold mb-1">Teras 03 · العلوم الأكاديمية</span>
+          <span class="font-editorial text-xl font-bold text-warmIvory" data-i18n="p3_title">Akademik KSSM &amp; STEM</span>
+        </button>
+      </div>
+
+      <!-- Active Pillar Content + Daily Schedule -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+        <div id="pillar-content-box" class="lg:col-span-7 bg-midnightNavy/75 border border-royalGold/35 p-6 sm:p-9">
+          <!-- Rendered dynamically via JS -->
+        </div>
+
+        <div class="lg:col-span-5 bg-warmIvory text-emeraldDeep p-6 sm:p-8 border-t-4 border-royalGold">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-editorial text-2xl font-bold" data-i18n="daily_title">Jadual Harian Pelajar</h3>
+            <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 bg-emeraldDeep text-royalGold">Disiplin</span>
+          </div>
+          <ul class="space-y-3 text-xs sm:text-sm">
+            <li class="flex items-start gap-3 pb-2.5 border-b border-emeraldDeep/10">
+              <span class="font-mono font-bold text-walnutBrown shrink-0">04:45</span>
+              <span data-i18n="sch_1">Qiyamullail, Solat Subuh Berjemaah &amp; Al-Ma’thurat</span>
+            </li>
+            <li class="flex items-start gap-3 pb-2.5 border-b border-emeraldDeep/10">
+              <span class="font-mono font-bold text-walnutBrown shrink-0">06:15</span>
+              <span data-i18n="sch_2">Halaqah Sabak (Hafazan Ayat Baharu &amp; Talaqqi)</span>
+            </li>
+            <li class="flex items-start gap-3 pb-2.5 border-b border-emeraldDeep/10">
+              <span class="font-mono font-bold text-walnutBrown shrink-0">08:30</span>
+              <span data-i18n="sch_3">Sarapan, Solat Dhuha &amp; Kelas Akademik / Turath</span>
+            </li>
+            <li class="flex items-start gap-3 pb-2.5 border-b border-emeraldDeep/10">
+              <span class="font-mono font-bold text-walnutBrown shrink-0">14:30</span>
+              <span data-i18n="sch_4">Muraja’ah Kubra (Ulangan Hafazan Terkumpul)</span>
+            </li>
+            <li class="flex items-start gap-3 pb-2.5 border-b border-emeraldDeep/10">
+              <span class="font-mono font-bold text-walnutBrown shrink-0">17:00</span>
+              <span data-i18n="sch_5">Riadah Sunnah (Memanah, Bola Sepak &amp; Olahraga)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-mono font-bold text-walnutBrown shrink-0">20:00</span>
+              <span data-i18n="sch_6">Solat Isyak, Manzil Malam &amp; Tidur Awal (22:30)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5-Year Progression Roadmap (Tingkatan 1 - Tingkatan 5) -->
+      <div class="border-t border-royalGold/30 pt-12">
+        <h3 class="font-editorial text-2xl sm:text-3xl text-center text-royalGold mb-8" data-i18n="roadmap_heading">
+          Pelan Pencapaian 5 Tahun (Tingkatan 1 hingga Tingkatan 5)
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div class="bg-midnightNavy/70 border border-royalGold/30 p-5">
+            <span class="text-xs font-bold uppercase tracking-widest text-royalGold">Tahun 1 · Tingkatan 1</span>
+            <h4 class="font-editorial text-xl font-bold text-warmIvory mt-1 mb-2">10 Juzuk Pertama</h4>
+            <p class="text-xs text-warmIvory/80 leading-relaxed">Pemantapan Tajwid, Makhraj huruf, asas Bahasa Arab komunikasi, dan subjek teras Tingkatan 1.</p>
+          </div>
+          <div class="bg-midnightNavy/70 border border-royalGold/30 p-5">
+            <span class="text-xs font-bold uppercase tracking-widest text-royalGold">Tahun 2 · Tingkatan 2</span>
+            <h4 class="font-editorial text-xl font-bold text-warmIvory mt-1 mb-2">20 Juzuk Hafazan</h4>
+            <p class="text-xs text-warmIvory/80 leading-relaxed">Hafazan 10 Juzuk seterusnya berserta ulangan berkala, Fiqh Ibadah, Hadith 40, dan Sains &amp; Matematik.</p>
+          </div>
+          <div class="bg-midnightNavy/70 border border-royalGold/30 p-5">
+            <span class="text-xs font-bold uppercase tracking-widest text-royalGold">Tahun 3 · Tingkatan 3</span>
+            <h4 class="font-editorial text-xl font-bold text-warmIvory mt-1 mb-2">Khatam 30 Juzuk</h4>
+            <p class="text-xs text-warmIvory/80 leading-relaxed">Menyempurnakan hafazan penuh 30 Juzuk Al-Quran serta penilaian pentaksiran menengah rendah.</p>
+          </div>
+          <div class="bg-midnightNavy/70 border border-royalGold/30 p-5">
+            <span class="text-xs font-bold uppercase tracking-widest text-royalGold">Tahun 4 · Tingkatan 4</span>
+            <h4 class="font-editorial text-xl font-bold text-warmIvory mt-1 mb-2">Syahadah &amp; Aliran SPM</h4>
+            <p class="text-xs text-warmIvory/80 leading-relaxed">Ujian Syahadah 30 Juzuk tanpa melihat mushaf dan permulaan silibus penuh aliran Sains / Sastera Ikhtisas.</p>
+          </div>
+          <div class="bg-royalGold/20 border border-royalGold p-5">
+            <span class="text-xs font-bold uppercase tracking-widest text-royalGold">Tahun 5 · Tingkatan 5</span>
+            <h4 class="font-editorial text-xl font-bold text-warmIvory mt-1 mb-2">Graduasi &amp; SPM</h4>
+            <p class="text-xs text-warmIvory/80 leading-relaxed">Pecutan penuh peperiksaan SPM, penganugerahan Sanad &amp; Syahadah Huffaz, serta bimbingan laluan universiti.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. GALERI FASILITI & KEHIDUPAN KAMPUS SEBENAR (INTERACTIVE PHOTO VIEWER)
+       ======================================================================== -->
+  <section id="fasiliti" class="py-20 lg:py-28 px-4 sm:px-8 islamic-lattice-light">
+    <div class="max-w-7xl mx-auto reveal-on-scroll">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.22em] text-walnutBrown block mb-2" data-i18n="fac_eyebrow">
+            Suasana &amp; Kemudahan Kampus
+          </span>
+          <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-bold text-emeraldDeep" data-i18n="fac_heading">
+            Tinjau Persekitaran Pembelajaran Sebenar
+          </h2>
+        </div>
+        <p class="text-sm text-emeraldDeep/80 max-w-md" data-i18n="fac_sub">
+          Klik setiap ruang di bawah untuk melihat kemudahan yang disediakan bagi keselesaan dan keselamatan para pelajar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Facility Selector Buttons -->
+        <div class="lg:col-span-5 space-y-3" id="facility-selector">
+          <button type="button" onclick="selectFacility(0)" class="fac-btn w-full text-left p-5 bg-emeraldDeep text-warmIvory border-l-4 border-royalGold shadow-md transition-all">
+            <span class="text-[11px] uppercase tracking-widest text-royalGold block">01 · Pusat Kerohanian</span>
+            <span class="font-editorial text-xl font-bold block mt-0.5">Dewan Utama Halaqah &amp; Surau Al-Hashimi</span>
+            <span class="text-xs text-warmIvory/75 block mt-1">Ruang berhawa dingin dengan hamparan permaidani selesa untuk sesi Talaqqi dan solat berjemaah.</span>
+          </button>
+
+          <button type="button" onclick="selectFacility(1)" class="fac-btn w-full text-left p-5 bg-white text-emeraldDeep border border-walnutBrown/15 hover:border-royalGold transition-all">
+            <span class="text-[11px] uppercase tracking-widest text-walnutBrown block">02 · Gedung Rujukan</span>
+            <span class="font-editorial text-xl font-bold block mt-0.5">Maktabah Al-Hashimi (Perpustakaan)</span>
+            <span class="text-xs text-emeraldDeep/70 block mt-1">Koleksi kitab Tafsir muktabar, Hadith Kutub al-Sittah, rujukan Bahasa Arab, dan buku STEM.</span>
+          </button>
+
+          <button type="button" onclick="selectFacility(2)" class="fac-btn w-full text-left p-5 bg-white text-emeraldDeep border border-walnutBrown/15 hover:border-royalGold transition-all">
+            <span class="text-[11px] uppercase tracking-widest text-walnutBrown block">03 · Akademik &amp; Inovasi</span>
+            <span class="font-editorial text-xl font-bold block mt-0.5">Bilik Darjah Pintar &amp; Makmal Sains</span>
+            <span class="text-xs text-emeraldDeep/70 block mt-1">Kelas bersaiz kecil (maksimum 22 pelajar) lengkap dengan paparan interaktif dan makmal eksperimen.</span>
+          </button>
+
+          <button type="button" onclick="selectFacility(3)" class="fac-btn w-full text-left p-5 bg-white text-emeraldDeep border border-walnutBrown/15 hover:border-royalGold transition-all">
+            <span class="text-[11px] uppercase tracking-widest text-walnutBrown block">04 · Laman &amp; Riadah Sunnah</span>
+            <span class="font-editorial text-xl font-bold block mt-0.5">Laman Sahn &amp; Gelanggang Memanah</span>
+            <span class="text-xs text-emeraldDeep/70 block mt-1">Taman landskap hijau yang menenangkan serta lapangan memanah sunnah dan aktiviti ko-kurikulum.</span>
+          </button>
+        </div>
+
+        <!-- Large Real Photo Display Stage -->
+        <div class="lg:col-span-7">
+          <div class="editorial-frame bg-white p-3 sm:p-4 shadow-xl">
+            <div class="relative overflow-hidden aspect-[16/10] bg-emeraldDeep">
+              <img
+                id="fac-photo"
+                src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1400&q=85"
+                onerror="this.onerror=null;this.src='https://placehold.co/1400x875/102D25/C6A568?text=Dewan+Halaqah+Alhashimi';"
+                alt="Dewan Utama Halaqah & Surau Al-Hashimi"
+                class="w-full h-full object-cover transition-all duration-500"
+              />
+              <div class="absolute top-4 left-4 bg-emeraldDeep/90 text-royalGold px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest border border-royalGold/40" id="fac-badge">
+                Kapasiti: 300 Jemaah
+              </div>
+            </div>
+            <div class="p-4 sm:p-6">
+              <h3 id="fac-title" class="font-editorial text-2xl sm:text-3xl font-bold text-emeraldDeep mb-2">
+                Dewan Utama Halaqah &amp; Surau Al-Hashimi
+              </h3>
+              <p id="fac-desc" class="text-sm text-emeraldDeep/80 leading-relaxed mb-4">
+                Nadi utama kampus tempat para pelajar memulakan hari seawal jam 4.45 pagi dengan Qiyamullail, solat Subuh berjemaah, dan sesi hafazan pagi. Seni bina ruang yang luas dengan pencahayaan semula jadi membantu pelajar mengekalkan fokus dan ketenangan minda.
+              </p>
+              <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-walnutBrown/15 text-xs font-semibold text-walnutBrown">
+                <span id="fac-meta">✓ Kawalan Keselamatan &amp; CCTV 24 Jam · Penyeliaan Warden</span>
+                <button type="button" onclick="openModal('modal-visit')" class="text-emeraldDeep underline hover:text-walnutBrown">
+                  Jadualkan Lawatan Fizikal →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. SUARA IBU BAPA, ALUMNI & BERITA SEMASA (PUBLIC SOCIAL PROOF)
+       ======================================================================== -->
+  <section id="testimoni" class="py-20 lg:py-28 px-4 sm:px-8 bg-white border-y border-walnutBrown/15">
+    <div class="max-w-7xl mx-auto reveal-on-scroll">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-[0.22em] text-walnutBrown block mb-2" data-i18n="test_eyebrow">
+          Kepercayaan Komuniti &amp; Kejayaan Pelajar
+        </span>
+        <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-bold text-emeraldDeep mb-4" data-i18n="test_heading">
+          Apa Kata Ibu Bapa &amp; Alumni Kami
+        </h2>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <article class="bg-ivorySoft p-7 border border-walnutBrown/15 flex flex-col justify-between">
+          <div>
+            <div class="text-royalGold text-base mb-3">★★★★★</div>
+            <p class="text-sm text-emeraldDeep/85 italic leading-relaxed mb-6">
+              “Alhamdulillah, anak sulung kami berjaya khatam 30 Juzuk pada usia 15 tahun dan memperoleh 8A dalam SPM. Perubahan paling ketara ialah adabnya dengan ibu bapa dan keupayaannya mengurus masa dengan sangat berdisiplin.”
+            </p>
+          </div>
+          <div class="border-t border-walnutBrown/15 pt-4">
+            <p class="font-editorial font-bold text-emeraldDeep">Dr. Mohd Faizal &amp; Puan Norazlina</p>
+            <p class="text-xs text-walnutBrown">Ibu Bapa Pelajar Kohort 2021 · Bangi, Selangor</p>
+          </div>
+        </article>
+
+        <article class="bg-ivorySoft p-7 border border-walnutBrown/15 flex flex-col justify-between">
+          <div>
+            <div class="text-royalGold text-base mb-3">★★★★★</div>
+            <p class="text-sm text-emeraldDeep/85 italic leading-relaxed mb-6">
+              “Asas Bahasa Arab dan ulangan Manzil yang ditekankan oleh para ustaz di Maahad Tahfiz Alhashimi sangat membantu saya ketika menyambung pengajian Syariah di Universiti Mu’tah, Jordan. Suasana kampus benar-benar mendidik jiwa.”
+            </p>
+          </div>
+          <div class="border-t border-walnutBrown/15 pt-4">
+            <p class="font-editorial font-bold text-emeraldDeep">Ahmad Syakir Al-Hafiz</p>
+            <p class="text-xs text-walnutBrown">Alumni 2023 · Mahasiswa Tahun 2, Universiti Mu’tah</p>
+          </div>
+        </article>
+
+        <article class="bg-ivorySoft p-7 border border-walnutBrown/15 flex flex-col justify-between">
+          <div>
+            <div class="text-royalGold text-base mb-3">★★★★★</div>
+            <p class="text-sm text-emeraldDeep/85 italic leading-relaxed mb-6">
+              “Kami sangat menghargai komunikasi telus pihak pengurusan. Setiap minggu kami menerima laporan prestasi hafazan anak. Makanan di dewan makan juga bersih, berkhasiat dan asrama sangat terjaga.”
+            </p>
+          </div>
+          <div class="border-t border-walnutBrown/15 pt-4">
+            <p class="font-editorial font-bold text-emeraldDeep">Ir. Hj. Zulkifli bin Rahman</p>
+            <p class="text-xs text-walnutBrown">Jurutera Perunding &amp; Waris Pelajar Tingkatan 3</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Berita & Program Komuniti Terkini -->
+      <div class="border-t border-walnutBrown/15 pt-12">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-emeraldDeep">Sorotan Aktiviti &amp; Program Komuniti</h3>
+          <button type="button" onclick="openModal('modal-apply')" class="text-xs font-bold uppercase tracking-widest text-walnutBrown hover:text-emeraldDeep">
+            Sertai Program Akan Datang →
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="border border-walnutBrown/15 bg-ivorySoft overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x500/102D25/C6A568?text=Majlis+Khatam+30+Juzuk';"
+              alt="Majlis Konvokesyen Huffaz dan Penyampaian Sanad"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-walnutBrown">Oktober 2026 · Konvokesyen</span>
+              <h4 class="font-editorial text-xl font-bold text-emeraldDeep mt-1 mb-2">Majlis Ihtifal Huffaz &amp; Penyampaian Sanad ke-12</h4>
+              <p class="text-xs text-emeraldDeep/75 leading-relaxed">Seramai 42 pelajar berjaya menamatkan hafazan 30 Juzuk dan menerima sijil Syahadah disaksikan ibu bapa serta tokoh ulama negeri.</p>
+            </div>
+          </div>
+
+          <div class="border border-walnutBrown/15 bg-ivorySoft overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x500/102D25/C6A568?text=Kejohanan+Memanah+Sunnah';"
+              alt="Kejohanan Memanah Sunnah antara Maahad"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-walnutBrown">September 2026 · Ko-Kurikulum</span>
+              <h4 class="font-editorial text-xl font-bold text-emeraldDeep mt-1 mb-2">Kejohanan Memanah Sunnah Terbuka Selangor</h4>
+              <p class="text-xs text-emeraldDeep/75 leading-relaxed">Pasukan memanah Al-Hashimi merangkul Johan Kategori Bawah 16 Tahun dalam kejohanan tahunan sukan sunnah peringkat negeri.</p>
+            </div>
+          </div>
+
+          <div class="border border-walnutBrown/15 bg-ivorySoft overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x500/102D25/C6A568?text=Kem+Tahfiz+Cuti+Sekolah';"
+              alt="Program Kem Tahfiz dan Bengkel STEM Cuti Sekolah"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-walnutBrown">Disember 2026 · Terbuka Umum</span>
+              <h4 class="font-editorial text-xl font-bold text-emeraldDeep mt-1 mb-2">Kem Smart Tahfiz &amp; Sains Cuti Sekolah</h4>
+              <p class="text-xs text-emeraldDeep/75 leading-relaxed">Program intensif 5 hari terbuka kepada pelajar sekolah rendah dan menengah seluruh Malaysia untuk merasai pengalaman hidup sebagai hafiz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. KEMASUKAN 2027, PENGANGGAR YURAN TELUS & TABUNG WAKAF PENDIDIKAN
+       ======================================================================== -->
+  <section id="yuran-kemasukan" class="py-20 lg:py-28 px-4 sm:px-8 islamic-lattice-light">
+    <div class="max-w-7xl mx-auto reveal-on-scroll">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <!-- Left: Syarat Kemasukan & Penganggar Yuran Interaktif -->
+        <div class="lg:col-span-7 bg-white p-7 sm:p-10 editorial-frame shadow-lg">
+          <span class="text-xs font-bold uppercase tracking-[0.22em] text-walnutBrown block mb-2">
+            Kemasukan Sesi 2027
+          </span>
+          <h2 class="font-editorial text-3xl sm:text-4xl font-bold text-emeraldDeep mb-4">
+            Struktur Yuran Telus &amp; Syarat Permohonan
+          </h2>
+          <p class="text-sm text-emeraldDeep/80 leading-relaxed mb-6">
+            Terbuka kepada pelajar lelaki dan perempuan berumur 13 hingga 17 tahun yang lancar membaca Al-Quran serta berminat mengikuti aliran Tahfiz &amp; Akademik.
+          </p>
+
+          <!-- Interactive Fee Estimator -->
+          <div class="bg-ivorySoft p-5 sm:p-6 border border-walnutBrown/20 mb-7">
+            <h3 class="font-editorial text-xl font-bold text-emeraldDeep mb-3">Semak Anggaran Yuran Pengajian</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-4">
+              <button type="button" onclick="selectFeePlan('boarding')" id="fee-btn-boarding" class="fee-plan-btn py-2.5 px-3 bg-emeraldDeep text-warmIvory text-xs font-semibold uppercase tracking-wider">
+                Asrama Penuh
+              </button>
+              <button type="button" onclick="selectFeePlan('day')" id="fee-btn-day" class="fee-plan-btn py-2.5 px-3 bg-white text-emeraldDeep border border-emeraldDeep/25 text-xs font-semibold uppercase tracking-wider">
+                Pelajar Harian
+              </button>
+              <button type="button" onclick="selectFeePlan('asnaf')" id="fee-btn-asnaf" class="fee-plan-btn py-2.5 px-3 bg-white text-emeraldDeep border border-emeraldDeep/25 text-xs font-semibold uppercase tracking-wider">
+                Biasiswa Asnaf
+              </button>
+            </div>
+
+            <div id="fee-summary-box" class="grid grid-cols-2 gap-3 text-xs sm:text-sm pt-2 border-t border-walnutBrown/15">
+              <span class="text-emeraldDeep/75">Yuran Bulanan (Pengajian + Makan 5x + Asrama):</span>
+              <span class="font-bold text-emeraldDeep text-right font-editorial text-lg">RM 980 / bulan</span>
+              <span class="text-emeraldDeep/75">Pendaftaran Tahunan, Kitab &amp; Takaful:</span>
+              <span class="font-semibold text-walnutBrown text-right">RM 1,450 / tahun</span>
+            </div>
+          </div>
+
+          <!-- 3 Easy Registration Steps -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <div class="p-4 bg-ivorySoft/70 border border-walnutBrown/15">
+              <span class="font-editorial text-xl font-bold text-walnutBrown">Langkah 1</span>
+              <p class="text-xs text-emeraldDeep/80 mt-1">Isi borang permohonan dalam talian secara percuma.</p>
+            </div>
+            <div class="p-4 bg-ivorySoft/70 border border-walnutBrown/15">
+              <span class="font-editorial text-xl font-bold text-walnutBrown">Langkah 2</span>
+              <p class="text-xs text-emeraldDeep/80 mt-1">Hadir sesi ujian kelancaran tilawah &amp; temuduga waris.</p>
+            </div>
+            <div class="p-4 bg-ivorySoft/70 border border-walnutBrown/15">
+              <span class="font-editorial text-xl font-bold text-walnutBrown">Langkah 3</span>
+              <p class="text-xs text-emeraldDeep/80 mt-1">Terima surat tawaran rasmi &amp; minggu orientasi.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <button type="button" onclick="openModal('modal-apply')" class="btn-gold px-6 py-3.5 text-xs uppercase rounded-sm">
+              Isi Borang Permohonan 2027
+            </button>
+            <button type="button" onclick="openModal('modal-visit')" class="btn-emerald px-6 py-3.5 text-xs uppercase rounded-sm">
+              Tempah Lawatan Kampus
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Tabung Wakaf Pendidikan & Biasiswa Huffaz -->
+        <div class="lg:col-span-5 bg-midnightNavy text-warmIvory p-7 sm:p-10 islamic-lattice-dark border border-royalGold/40 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-[0.22em] text-royalGold">Wakaf &amp; Infaq</span>
+              <span class="arabic-script text-xl text-royalGold" lang="ar" dir="rtl">الوقف التعليمي</span>
+            </div>
+            <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-warmIvory mb-4">
+              Tabung Biasiswa Huffaz &amp; Wakaf Pembangunan Ilmu
+            </h3>
+            <p class="text-xs sm:text-sm text-warmIvory/80 leading-relaxed mb-6">
+              Lebih 35% pelajar di Maahad Tahfiz Alhashimi terdiri daripada anak yatim dan keluarga asnaf yang ditaja sepenuhnya melalui sumbangan Wakaf masyarakat. Setiap huruf Al-Quran yang dibaca menjadi pahala berterusan buat pewakaf.
+            </p>
+
+            <div class="space-y-5 mb-8">
+              <div>
+                <div class="flex justify-between text-xs mb-1.5">
+                  <span class="text-warmIvory/90">Tajaan Biasiswa Huffaz Asnaf &amp; Yatim 2027</span>
+                  <span class="text-royalGold font-bold">82% Tercapai</span>
+                </div>
+                <div class="w-full h-2 bg-warmIvory/15">
+                  <div class="h-full bg-royalGold w-[82%]"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs mb-1.5">
+                  <span class="text-warmIvory/90">Wakaf Mushaf Al-Quran &amp; Kitab Maktabah</span>
+                  <span class="text-royalGold font-bold">68% Tercapai</span>
+                </div>
+                <div class="w-full h-2 bg-warmIvory/15">
+                  <div class="h-full bg-royalGold w-[68%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" onclick="openModal('modal-waqf')" class="btn-gold w-full py-3.5 text-xs uppercase rounded-sm">
+            Sumbang ke Tabung Wakaf Sekarang
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. FOOTER & MAKLUMAT PERHUBUNGAN RASMI
+       ======================================================================== -->
+  <footer class="bg-emeraldDeep text-warmIvory pt-16 pb-10 px-4 sm:px-8 border-t-4 border-royalGold">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-royalGold/20">
+        <div class="lg:col-span-5">
+          <p class="arabic-script text-3xl text-royalGold mb-1" lang="ar" dir="rtl">معهد تحفيظ الهاشمي</p>
+          <h2 class="font-editorial text-2xl font-bold tracking-wide mb-3">MAAHAD TAHFIZ ALHASHIMI</h2>
+          <p class="text-sm text-warmIvory/80 leading-relaxed max-w-md mb-5">
+            Institusi pendidikan tahfiz berasrama penuh dan harian yang menggabungkan hafazan 30 Juzuk Al-Quran bersanad dengan kecemerlangan akademik moden.
+          </p>
+          <span class="inline-block px-3 py-1 bg-midnightNavy/60 border border-royalGold/35 text-xs text-royalGold">
+            No. Pendaftaran Institusi: BZH-8042 · Berdaftar JAIS &amp; KPM
+          </span>
+        </div>
+
+        <div class="lg:col-span-4">
+          <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-royalGold mb-4">Alamat &amp; Waktu Lawatan</h3>
+          <address class="not-italic text-sm text-warmIvory/85 space-y-2 leading-relaxed">
+            <p>Lot 1482, Persiaran Ilmu Al-Hashimi,<br />43000 Kajang / Bangi,<br />Selangor Darul Ehsan, Malaysia</p>
+            <p class="pt-2"><strong class="text-royalGold">Pejabat:</strong> 03-8925 4410 / 019-388 7120</p>
+            <p><strong class="text-royalGold">E-mel:</strong> kemasukan@tahfizalhashimi.edu.my</p>
+            <p><strong class="text-royalGold">Lawatan Ibu Bapa:</strong> Isnin – Sabtu (9.00 Pagi – 4.30 Petang)</p>
+          </address>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-royalGold mb-4">Pautan Pantas</h3>
+          <ul class="space-y-2.5 text-sm text-warmIvory/80">
+            <li><a href="#tentang-kami" class="hover:text-royalGold transition-colors">Tentang &amp; Warkah Mudir</a></li>
+            <li><a href="#kurikulum" class="hover:text-royalGold transition-colors">Kurikulum &amp; Pelan 5 Tahun</a></li>
+            <li><a href="#fasiliti" class="hover:text-royalGold transition-colors">Galeri Fasiliti Kampus</a></li>
+            <li><a href="#testimoni" class="hover:text-royalGold transition-colors">Testimoni &amp; Berita Terkini</a></li>
+            <li><a href="#yuran-kemasukan" class="hover:text-royalGold transition-colors">Semakan Yuran &amp; Tabung Wakaf</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warmIvory/65">
+        <p>© 2026 Maahad Tahfiz Alhashimi (معهد تحفيظ الهاشمي). Hak Cipta Terpelihara.</p>
+        <p class="font-editorial italic text-royalGold">“Membina Generasi Al-Quran, Memimpin Masa Depan”</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       10. INTERACTIVE MODALS (PERMOHONAN, LAWATAN KAMPUS & WAKAF)
+       ======================================================================== -->
+
+  <!-- MODAL 1: BORANG PERMOHONAN PELAJAR 2027 -->
+  <div id="modal-apply" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-midnightNavy/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="title-apply">
+    <div class="bg-warmIvory editorial-frame max-w-xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl">
+      <button type="button" onclick="closeAllModals()" class="absolute top-4 right-4 w-9 h-9 border border-emeraldDeep/25 flex items-center justify-center text-emeraldDeep hover:bg-emeraldDeep hover:text-warmIvory" aria-label="Tutup">✕</button>
+      <span class="text-[11px] font-bold uppercase tracking-widest text-walnutBrown">Ambilan Sesi 2027</span>
+      <h3 id="title-apply" class="font-editorial text-2xl sm:text-3xl font-bold text-emeraldDeep mt-1 mb-2">Borang Pendaftaran Pelajar</h3>
+      <p class="text-xs text-emeraldDeep/75 mb-5">Lengkapkan maklumat di bawah. Pegawai Kemasukan kami akan menghubungi tuan/puan untuk menetapkan tarikh ujian tilawah dan temuduga.</p>
+
+      <form onsubmit="submitForm(event, 'fb-apply')" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">Nama Penuh Pelajar *</label>
+            <input type="text" required placeholder="Contoh: Muhammad Rayyan bin Ahmad" class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">Tingkatan Dimohon *</label>
+            <select required class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep">
+              <option value="">Pilih Tingkatan</option>
+              <option>Tingkatan 1 (Umur 13 Tahun)</option>
+              <option>Tingkatan 2 (Umur 14 Tahun)</option>
+              <option>Tingkatan 3 (Umur 15 Tahun)</option>
+              <option>Tingkatan 4 (Umur 16 Tahun)</option>
+              <option>Aliran Syahadah Sepenuh Masa</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">Nama Ibu / Bapa / Penjaga *</label>
+            <input type="text" required placeholder="Nama Penuh Penjaga" class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">No. Telefon / WhatsApp *</label>
+            <input type="tel" required placeholder="012-345 6789" class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">Tahap Hafazan Semasa</label>
+          <select class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep">
+            <option>Lancar Membaca Al-Quran (0 Juzuk)</option>
+            <option>1 – 5 Juzuk</option>
+            <option>6 – 15 Juzuk</option>
+            <option>16 – 30 Juzuk</option>
+          </select>
+        </div>
+
+        <div id="fb-apply" class="hidden p-4 bg-emeraldDeep text-warmIvory text-xs border-l-4 border-royalGold">
+          <strong>Satu langkah lagi:</strong> tekan "Hantar" di WhatsApp untuk menghantar permohonan.
+          <a href="#" target="_blank" rel="noopener" class="underline text-royalGold">Buka WhatsApp</a>
+        </div>
+
+        <div class="pt-2 flex justify-end gap-3">
+          <button type="button" onclick="closeAllModals()" class="px-4 py-2.5 border border-emeraldDeep/30 text-xs font-semibold uppercase text-emeraldDeep">Batal</button>
+          <button type="submit" class="btn-gold px-6 py-2.5 text-xs uppercase">Hantar Permohonan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: TEMPAH LAWATAN KAMPUS -->
+  <div id="modal-visit" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-midnightNavy/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="title-visit">
+    <div class="bg-warmIvory editorial-frame max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
+      <button type="button" onclick="closeAllModals()" class="absolute top-4 right-4 w-9 h-9 border border-emeraldDeep/25 flex items-center justify-center text-emeraldDeep hover:bg-emeraldDeep hover:text-warmIvory" aria-label="Tutup">✕</button>
+      <span class="text-[11px] font-bold uppercase tracking-widest text-walnutBrown">Lawatan Fizikal</span>
+      <h3 id="title-visit" class="font-editorial text-2xl font-bold text-emeraldDeep mt-1 mb-2">Tempah Sesi Lawatan Kampus</h3>
+      <p class="text-xs text-emeraldDeep/75 mb-5">Tinjau sendiri dewan hafazan, perpustakaan, kelas dan asrama pelajar bersama pegawai perunding kami.</p>
+
+      <form onsubmit="submitForm(event, 'fb-visit')" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">Nama Penuh Pelawat *</label>
+          <input type="text" required placeholder="Nama Ibu / Bapa" class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep" />
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">Tarikh Pilihan *</label>
+            <input type="date" required class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">Sesi *</label>
+            <select class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep">
+              <option>Sesi Pagi (10.00 Pagi)</option>
+              <option>Sesi Petang (2.30 Petang)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">No. WhatsApp *</label>
+          <input type="tel" required placeholder="019-..." class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep" />
+        </div>
+        <div id="fb-visit" class="hidden p-3.5 bg-emeraldDeep text-warmIvory text-xs border-l-4 border-royalGold">
+          <strong>Satu langkah lagi:</strong> tekan "Hantar" di WhatsApp. Tarikh lawatan sah selepas pejabat membalas.
+          <a href="#" target="_blank" rel="noopener" class="underline text-royalGold">Buka WhatsApp</a>
+        </div>
+        <button type="submit" class="btn-emerald w-full py-3 text-xs uppercase">Sahkan Temujanji Lawatan</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 3: SUMBANGAN TABUNG WAKAF -->
+  <div id="modal-waqf" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-midnightNavy/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="title-waqf">
+    <div class="bg-warmIvory editorial-frame max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
+      <button type="button" onclick="closeAllModals()" class="absolute top-4 right-4 w-9 h-9 border border-emeraldDeep/25 flex items-center justify-center text-emeraldDeep hover:bg-emeraldDeep hover:text-warmIvory" aria-label="Tutup">✕</button>
+      <p class="arabic-script text-xl text-walnutBrown font-bold" lang="ar" dir="rtl">صَدَقَةٌ جَارِيَةٌ لِأَهْلِ الْقُرْآنِ</p>
+      <h3 id="title-waqf" class="font-editorial text-2xl font-bold text-emeraldDeep mb-2">Tabung Wakaf Pendidikan Al-Hashimi</h3>
+      <p class="text-xs text-emeraldDeep/75 mb-4">Sumbangan anda disalurkan terus untuk biasiswa pelajar asnaf, cetakan mushaf dan penyelenggaraan ruang ilmu.</p>
+
+      <form onsubmit="submitForm(event, 'fb-waqf')" class="space-y-4">
+        <div class="grid grid-cols-3 gap-2">
+          <button type="button" onclick="chooseWaqf(this, 'RM 50')" class="waqf-choice py-2.5 bg-emeraldDeep text-warmIvory text-xs font-bold">RM 50</button>
+          <button type="button" onclick="chooseWaqf(this, 'RM 200')" class="waqf-choice py-2.5 bg-white border border-emeraldDeep/25 text-emeraldDeep text-xs font-bold">RM 200</button>
+          <button type="button" onclick="chooseWaqf(this, 'RM 500')" class="waqf-choice py-2.5 bg-white border border-emeraldDeep/25 text-emeraldDeep text-xs font-bold">RM 500</button>
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-emeraldDeep mb-1">Nama Pewakaf / Niat Infaq *</label>
+          <input type="text" required placeholder="Contoh: Hamba Allah / Keluarga Hj. Sulaiman" class="w-full px-3.5 py-2.5 bg-white border border-emeraldDeep/25 text-sm text-emeraldDeep" />
+        </div>
+        <div class="p-3.5 bg-white border border-walnutBrown/25 text-xs text-emeraldDeep">
+          <p class="font-bold">Akaun Rasmi Tabung Wakaf (Bank Islam Malaysia Berhad):</p>
+          <p class="font-mono text-walnutBrown text-sm font-bold mt-1">1202-9010-0849-22 · Tabung Wakaf Maahad Tahfiz Alhashimi</p>
+        </div>
+        <div id="fb-waqf" class="hidden p-3.5 bg-emeraldDeep text-warmIvory text-xs border-l-4 border-royalGold">
+          <strong>Jazakumullahu Khairan Kathira.</strong> Tekan "Hantar" di WhatsApp untuk memaklumkan sumbangan (<span id="waqf-val-label" class="text-royalGold font-bold">RM 50</span>) bagi tujuan resit.
+          <a href="#" target="_blank" rel="noopener" class="underline text-royalGold">Buka WhatsApp</a>
+        </div>
+        <button type="submit" class="btn-gold w-full py-3 text-xs uppercase">Rekodkan Sumbangan Wakaf</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       11. JAVASCRIPT INTERACTIVITY (BILINGUAL, TABS, GALLERY, FEE CALCULATOR)
+       ======================================================================== -->
+  <script>
+    /* 1. BILINGUAL DICTIONARY (BAHASA MELAYU DEFAULT & ENGLISH) */
+    let activeLang = 'ms';
+    let activePillarIndex = 0;
+
+    const TRANSLATIONS = {
+      ms: {
+        topbar_notice: 'Pendaftaran Pelajar Baharu Sesi 2027 Kini Dibuka (Tingkatan 1 – Tingkatan 5) · Biasiswa Asnaf & Merit Disediakan',
+        topbar_visit: 'Tempah Lawatan Kampus',
+        nav_about: 'Tentang Kami',
+        nav_curriculum: 'Kurikulum',
+        nav_facilities: 'Fasiliti Kampus',
+        nav_testimonials: 'Testimoni',
+        nav_admissions: 'Yuran & Kemasukan',
+        nav_cta: 'Mohon 2027',
+        hero_badge: 'Institusi Tahfiz Bertauliah · Berdaftar JAIS & KPM',
+        hero_title: 'Melahirkan Generasi Huffaz Profesional & Berakhlak Mulia',
+        hero_desc: 'Gabungan pendidikan hafazan 30 Juzuk Al-Quran bersanad, pengajian kitab Turath, dan aliran akademik arus perdana (SPM / STEM) dalam persekitaran kampus yang tenang, selamat, dan penuh kasih sayang.',
+        hero_verse: '“Sesungguhnya Al-Quran ini memberi petunjuk ke jalan yang amat betul.” — Surah Al-Isra (17:9)',
+        hero_btn_apply: 'Daftar Kemasukan 2027',
+        hero_btn_tour: 'Lihat Fasiliti & Kampus',
+        stat_1: 'Hafazan Bersanad',
+        stat_2: 'Lulus Syahadah & SPM',
+        stat_3: 'Pengalaman Mendidik',
+        mudir_quote: '“Kami mendidik anak-anak bukan sekadar untuk menghafaz ayat suci di ingatan, tetapi membentuk keperibadian agar Al-Quran terpancar pada akhlak, disiplin, dan kecemerlangan akademik mereka.”',
+        mudir_title: 'Mudir & Pengerusi Majlis Akademik',
+        about_eyebrow: 'Tentang Maahad Tahfiz Alhashimi',
+        about_heading: 'Kenapa Ibu Bapa Mempercayai Pendidikan Kami?',
+        about_p1: 'Ditubuhkan sejak tahun 2012, Maahad Tahfiz Alhashimi komited menyediakan ekosistem pendidikan Islam bersepadu. Kami memahami kebimbangan ibu bapa moden: mahukan anak yang hafiz Al-Quran dan teguh jati diri Islamnya, namun dalam masa yang sama mempunyai kelayakan akademik yang kukuh untuk melangkah ke menara gading.',
+        why1_t: 'Sanad Al-Quran Bersambung',
+        why1_d: 'Semakan bacaan harian (Talaqqi) bersama barisan asatizah huffaz bertauliah yang memiliki sanad bacaan sahih sehingga Rasulullah SAW.',
+        why2_t: 'Aliran Akademik & SPM',
+        why2_d: 'Mengikuti silibus kebangsaan (KSSM) termasuk Sains Tulen, Matematik Tambahan, Bahasa Inggeris, dan Bahasa Arab Tinggi.',
+        why3_t: 'Pembentukan Adab & Sahsiah',
+        why3_d: 'Bimbingan warden sepenuh masa, solat berjemaah 5 waktu, qiyamullail, serta latihan kepimpinan dan khutbah Jumaat.',
+        why4_t: 'Laporan Kemajuan Berkala',
+        why4_d: 'Ibu bapa menerima rekod hafazan mingguan (Sabak, Para-Sabak, Manzil) serta sesi konsultasi akademik setiap penggal.',
+        curr_eyebrow: 'Kurikulum Bersepadu Dwi-Aliran',
+        curr_heading: 'Tiga Teras Pembentukan & Pelan 5 Tahun',
+        curr_sub: 'Susunan pembelajaran yang seimbang supaya pelajar tidak terbeban, malah mampu mengkhatamkan 30 Juzuk dengan mantap sebelum menduduki peperiksaan SPM.',
+        p1_title: 'Tahfiz Al-Quran & Tajwid',
+        p2_title: 'Ulum Syar’iyyah & Bahasa Arab',
+        p3_title: 'Akademik KSSM & STEM',
+        daily_title: 'Jadual Harian Pelajar',
+        sch_1: 'Qiyamullail, Solat Subuh Berjemaah & Al-Ma’thurat',
+        sch_2: 'Halaqah Sabak (Hafazan Ayat Baharu & Talaqqi)',
+        sch_3: 'Sarapan, Solat Dhuha & Kelas Akademik / Turath',
+        sch_4: 'Muraja’ah Kubra (Ulangan Hafazan Terkumpul)',
+        sch_5: 'Riadah Sunnah (Memanah, Bola Sepak & Olahraga)',
+        sch_6: 'Solat Isyak, Manzil Malam & Tidur Awal (22:30)',
+        roadmap_heading: 'Pelan Pencapaian 5 Tahun (Tingkatan 1 hingga Tingkatan 5)',
+        fac_eyebrow: 'Suasana & Kemudahan Kampus',
+        fac_heading: 'Tinjau Persekitaran Pembelajaran Sebenar',
+        fac_sub: 'Klik setiap ruang di bawah untuk melihat kemudahan yang disediakan bagi keselesaan dan keselamatan para pelajar.',
+        test_eyebrow: 'Kepercayaan Komuniti & Kejayaan Pelajar',
+        test_heading: 'Apa Kata Ibu Bapa & Alumni Kami',
+      },
+      en: {
+        topbar_notice: '2027 Student Intake Now Open (Form 1 – Form 5) · Asnaf & Merit Scholarships Available',
+        topbar_visit: 'Book Campus Visit',
+        nav_about: 'About Us',
+        nav_curriculum: 'Curriculum',
+        nav_facilities: 'Facilities',
+        nav_testimonials: 'Testimonials',
+        nav_admissions: 'Fees & Admissions',
+        nav_cta: 'Apply 2027',
+        hero_badge: 'Accredited Tahfiz Institution · Registered with JAIS & MOE',
+        hero_title: 'Nurturing Professional Huffaz of Noble Character',
+        hero_desc: 'Integrating 30-Juzuk Sanad-connected Quranic memorization, classical Turath scholarship, and mainstream SPM / STEM academics within a serene, safe, and nurturing campus.',
+        hero_verse: '“Indeed, this Qur’an guides to that which is most upright.” — Surah Al-Isra (17:9)',
+        hero_btn_apply: 'Apply for 2027 Intake',
+        hero_btn_tour: 'Explore Real Campus',
+        stat_1: 'Sanad Memorization',
+        stat_2: 'Syahadah & SPM Pass',
+        stat_3: 'Years of Excellence',
+        mudir_quote: '“We educate students not merely to hold the Holy Quran in memory, but to embody its wisdom, discipline, and compassion in every walk of life.”',
+        mudir_title: 'Principal & Chairman of the Academic Council',
+        about_eyebrow: 'About Maahad Tahfiz Alhashimi',
+        about_heading: 'Why Parents Entrust Their Children With Us',
+        about_p1: 'Established in 2012, Maahad Tahfiz Alhashimi provides an integrated Islamic educational ecosystem—uniting strong Quranic mastery and character formation with rigorous academic qualifications for university admission.',
+        why1_t: 'Unbroken Quranic Sanad',
+        why1_d: 'Daily one-on-one Talaqqi recitation before certified Huffaz teachers holding authentic Sanad chains.',
+        why2_t: 'KSSM & SPM Academic Stream',
+        why2_d: 'Full national secondary syllabus including Pure Sciences, Additional Mathematics, English, and Higher Arabic.',
+        why3_t: 'Character & Adab Mentorship',
+        why3_d: '24-hour pastoral care, five daily congregational prayers, Qiyamullail, and public speaking leadership.',
+        why4_t: 'Transparent Progress Reports',
+        why4_d: 'Parents receive weekly memorization logs (Sabak, Para-Sabak, Manzil) and termly academic consultations.',
+        curr_eyebrow: 'Integrated Dual-Stream Curriculum',
+        curr_heading: 'Three Pillars of Formation & 5-Year Roadmap',
+        curr_sub: 'A thoughtfully paced structure enabling students to complete 30 Juzuk smoothly before sitting for their SPM examinations.',
+        p1_title: 'Tahfiz Al-Quran & Tajwid',
+        p2_title: 'Ulum Syar’iyyah & Arabic',
+        p3_title: 'KSSM & STEM Academics',
+        daily_title: 'Student Daily Schedule',
+        sch_1: 'Qiyamullail, Subuh Congregation & Al-Ma’thurat',
+        sch_2: 'Halaqah Sabak (New Memorization & Talaqqi)',
+        sch_3: 'Breakfast, Dhuha Prayer & Academic / Turath Classes',
+        sch_4: 'Muraja’ah Kubra (Cumulative Revision)',
+        sch_5: 'Sunnah Sports (Archery, Football & Athletics)',
+        sch_6: 'Isyak Prayer, Nightly Manzil & Lights Out (22:30)',
+        roadmap_heading: '5-Year Achievement Roadmap (Form 1 to Form 5)',
+        fac_eyebrow: 'Real Campus & Facilities',
+        fac_heading: 'Explore Our Living Learning Environment',
+        fac_sub: 'Select any facility below to inspect the spaces designed for student comfort, focus, and safety.',
+        test_eyebrow: 'Community Trust & Student Success',
+        test_heading: 'Voices of Parents & Alumni',
+      },
+    };
+
+    const PILLAR_DETAILS = [
+      {
+        ms: {
+          tag: 'Teras 01 · Penguasaan Teras Al-Quran',
+          title: 'Hafazan 30 Juzuk Bersanad & Tajwid Al-Jazariyyah',
+          desc: 'Setiap pelajar dibimbing dalam kumpulan kecil (10 pelajar bagi setiap guru) menggunakan kaedah Sabak (hafazan baharu), Para-Sabak (ulangan 1 juzuk terkini), dan Manzil (ulangan hafazan lama) bagi menjamin ingatan jangka panjang.',
+          points: [
+            'Sasaran khatam penuh 30 Juzuk dalam tempoh 3 hingga 3.5 tahun pertama',
+            'Penguasaan hukum Tajwid praktikal & Matan Al-Jazariyyah',
+            'Ujian Syahadah 30 Juzuk (bacaan lancar tanpa melihat mushaf)',
+            'Latihan menjadi Imam Solat Terawih & Majlis Tilawah',
+          ],
+        },
+        en: {
+          tag: 'Pillar 01 · Core Quranic Mastery',
+          title: '30-Juzuk Sanad Memorization & Tajwid',
+          desc: 'Students are mentored in small circles (10 students per teacher) utilizing Sabak, Para-Sabak, and Manzil revision cycles to ensure lifelong retention.',
+          points: [
+            'Target full 30-Juzuk completion within the first 3 to 3.5 years',
+            'Mastery of practical Tajwid & Matan Al-Jazariyyah',
+            '30-Juzuk Syahadah examination without looking at the Mushaf',
+            'Practical leadership training as Terawih Imam',
+          ],
+        },
+      },
+      {
+        ms: {
+          tag: 'Teras 02 · Ilmu Wahyu & Bahasa Al-Quran',
+          title: 'Ulum Syar’iyyah, Kitab Turath & Bahasa Arab Fusha',
+          desc: 'Pelajar bukan sekadar menghafaz, malah dididik memahami makna ayat suci melalui penguasaan Bahasa Arab, Fiqh Ibadah, Aqidah Ahli Sunnah Wal Jamaah, dan Hadith.',
+          points: [
+            'Pertuturan Bahasa Arab harian serta tatabahasa Nahwu & Sorof',
+            'Pengajian kitab Turath asas: Matan Abi Syuja’, Arbain Nawawiyyah & Riyadhus Solihin',
+            'Pemantapan adab penuntut ilmu, akhlak mulia & sirah Nabawiyyah',
+            'Kelayakan menyambung pengajian ke Universiti Al-Azhar, Jordan & Timur Tengah',
+          ],
+        },
+        en: {
+          tag: 'Pillar 02 · Islamic Sciences & Language',
+          title: 'Ulum Syar’iyyah, Classical Turath & Arabic',
+          desc: 'Students learn to comprehend the Quran through structured Arabic grammar, Shafi’i Fiqh, Aqidah, and Hadith studies.',
+          points: [
+            'Conversational Arabic & classical Nahwu/Sorof grammar',
+            'Foundational Turath texts: Matan Abi Syuja’ & Arbain Nawawiyyah',
+            'Adab, character refinement & Prophetic Seerah',
+            'Direct pathway to Al-Azhar, Jordanian & local Islamic universities',
+          ],
+        },
+      },
+      {
+        ms: {
+          tag: 'Teras 03 · Kesiapsiagaan Kerjaya Profesional',
+          title: 'Kurikulum Kebangsaan (KSSM / SPM) & STEM',
+          desc: 'Sesi akademik berstruktur setiap pagi dan petang membolehkan pelajar menduduki SPM dalam aliran Sains Tulen atau Ikhtisas dengan bimbingan guru pakar.',
+          points: [
+            'Subjek Teras: Bahasa Melayu, Bahasa Inggeris, Matematik & Sejarah',
+            'Subjek Elektif: Fizik, Kimia, Biologi, Matematik Tambahan & Prinsip Perakaunan',
+            'Bengkel literasi digital, pengaturcaraan asas & kemahiran insaniah',
+            'Kelas pecutan intensif SPM khusus bagi calon Tingkatan 5',
+          ],
+        },
+        en: {
+          tag: 'Pillar 03 · Professional Academic Readiness',
+          title: 'National Curriculum (KSSM / SPM) & STEM',
+          desc: 'Structured academic classes prepare students for SPM in Pure Sciences or Humanities with dedicated specialist teachers.',
+          points: [
+            'Core Subjects: Bahasa Melayu, English, Mathematics & History',
+            'Electives: Physics, Chemistry, Biology, Additional Maths & Accounting',
+            'Digital literacy workshops & soft-skills leadership',
+            'Dedicated Form 5 intensive SPM coaching',
+          ],
+        },
+      },
+    ];
+
+    function renderPillarContent() {
+      const box = document.getElementById('pillar-content-box');
+      if (!box) return;
+      const data = PILLAR_DETAILS[activePillarIndex][activeLang];
+      box.innerHTML = `
+        <span class="text-xs font-bold uppercase tracking-widest text-royalGold block mb-2">${data.tag}</span>
+        <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-warmIvory mb-4">${data.title}</h3>
+        <p class="text-sm text-warmIvory/85 leading-relaxed mb-6">${data.desc}</p>
+        <ul class="space-y-3 border-t border-royalGold/25 pt-5">
+          ${data.points.map(pt => `
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-warmIvory/90">
+              <span class="text-royalGold font-bold">✓</span>
+              <span>${pt}</span>
+            </li>
+          `).join('')}
+        </ul>
+      `;
+    }
+
+    function selectPillar(idx) {
+      activePillarIndex = idx;
+      document.querySelectorAll('.pillar-btn').forEach((btn, i) => {
+        const isSelected = i === idx;
+        btn.classList.toggle('border-royalGold', isSelected);
+        btn.classList.toggle('bg-royalGold/15', isSelected);
+        btn.classList.toggle('border-royalGold/30', !isSelected);
+        btn.classList.toggle('bg-midnightNavy/40', !isSelected);
+      });
+      renderPillarContent();
+    }
+
+    function toggleLanguage() {
+      activeLang = activeLang === 'ms' ? 'en' : 'ms';
+      const dict = TRANSLATIONS[activeLang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+      renderPillarContent();
+    }
+
+    /* 2. REAL CAMPUS FACILITY GALLERY SWITCHER */
+    const FACILITIES = [
+      {
+        title: 'Dewan Utama Halaqah & Surau Al-Hashimi',
+        badge: 'Kapasiti: 300 Jemaah',
+        photo: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1400&q=85',
+        desc: 'Nadi utama kampus tempat para pelajar memulakan hari seawal jam 4.45 pagi dengan Qiyamullail, solat Subuh berjemaah, dan sesi hafazan pagi. Seni bina ruang yang luas dengan pencahayaan semula jadi membantu pelajar mengekalkan fokus dan ketenangan minda.',
+        meta: '✓ Kawalan Keselamatan & CCTV 24 Jam · Penyeliaan Warden',
+      },
+      {
+        title: 'Maktabah Al-Hashimi (Perpustakaan Turath & Digital)',
+        badge: '5,000+ Naskhah Kitab & Buku',
+        photo: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1400&q=85',
+        desc: 'Ruang bacaan senyap yang menghimpunkan kitab-kitab Tafsir muktabar seperti Tafsir Ibn Kathir dan Al-Qurtubi, koleksi Hadith, kamus Bahasa Arab, serta buku rujukan Sains dan Matematik SPM untuk ulang kaji pelajar.',
+        meta: '✓ Sudut Bacaan Individu · Akses Rujukan Terkawal',
+      },
+      {
+        title: 'Bilik Darjah Pintar & Makmal Sains STEM',
+        badge: 'Nisbah Kelas: Maksimum 22 Pelajar',
+        photo: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1400&q=85',
+        desc: 'Setiap bilik darjah dilengkapi penyaman udara dan paparan skrin interaktif bagi memudahkan pembelajaran subjek KSSM, manakala makmal sains menyediakan kelengkapan amali Fizik, Kimia dan Biologi.',
+        meta: '✓ Makmal Sains Lengkap · Bimbingan Guru Pakar SPM',
+      },
+      {
+        title: 'Laman Sahn & Gelanggang Memanah Sunnah',
+        badge: 'Kawasan Kampus Berpagar 4.5 Ekar',
+        photo: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1400&q=85',
+        desc: 'Persekitaran kampus yang dikelilingi kehijauan pokok dan taman rekreasi memberikan keseimbangan fizikal dan mental kepada pelajar melalui aktiviti memanah sunnah, bola sepak, dan riadah petang.',
+        meta: '✓ Jurulatih Memanah Bertauliah · Klinik Kesihatan Berdekatan',
+      },
+    ];
+
+    function selectFacility(index) {
+      const item = FACILITIES[index];
+      if (!item) return;
+
+      document.querySelectorAll('.fac-btn').forEach((btn, i) => {
+        const active = i === index;
+        if (active) {
+          btn.className = 'fac-btn w-full text-left p-5 bg-emeraldDeep text-warmIvory border-l-4 border-royalGold shadow-md transition-all';
+          btn.querySelector('span:nth-child(1)').className = 'text-[11px] uppercase tracking-widest text-royalGold block';
+          btn.querySelector('span:nth-child(3)').className = 'text-xs text-warmIvory/75 block mt-1';
+        } else {
+          btn.className = 'fac-btn w-full text-left p-5 bg-white text-emeraldDeep border border-walnutBrown/15 hover:border-royalGold transition-all';
+          btn.querySelector('span:nth-child(1)').className = 'text-[11px] uppercase tracking-widest text-walnutBrown block';
+          btn.querySelector('span:nth-child(3)').className = 'text-xs text-emeraldDeep/70 block mt-1';
+        }
+      });
+
+      const imgEl = document.getElementById('fac-photo');
+      imgEl.src = item.photo;
+      imgEl.alt = item.title;
+      document.getElementById('fac-badge').textContent = item.badge;
+      document.getElementById('fac-title').textContent = item.title;
+      document.getElementById('fac-desc').textContent = item.desc;
+      document.getElementById('fac-meta').textContent = item.meta;
+    }
+
+    /* 3. TRANSPARENT FEE ESTIMATOR */
+    function selectFeePlan(plan) {
+      document.querySelectorAll('.fee-plan-btn').forEach(btn => {
+        btn.className = 'fee-plan-btn py-2.5 px-3 bg-white text-emeraldDeep border border-emeraldDeep/25 text-xs font-semibold uppercase tracking-wider';
+      });
+      const activeBtn = document.getElementById('fee-btn-' + plan);
+      if (activeBtn) {
+        activeBtn.className = 'fee-plan-btn py-2.5 px-3 bg-emeraldDeep text-warmIvory text-xs font-semibold uppercase tracking-wider';
+      }
+
+      const box = document.getElementById('fee-summary-box');
+      if (plan === 'boarding') {
+        box.innerHTML = `
+          <span class="text-emeraldDeep/75">Yuran Bulanan (Pengajian + Makan 5x + Asrama):</span>
+          <span class="font-bold text-emeraldDeep text-right font-editorial text-lg">RM 980 / bulan</span>
+          <span class="text-emeraldDeep/75">Pendaftaran Tahunan, Kitab &amp; Takaful:</span>
+          <span class="font-semibold text-walnutBrown text-right">RM 1,450 / tahun</span>
+        `;
+      } else if (plan === 'day') {
+        box.innerHTML = `
+          <span class="text-emeraldDeep/75">Yuran Bulanan Pelajar Harian (Pengajian + Makan Tengah Hari):</span>
+          <span class="font-bold text-emeraldDeep text-right font-editorial text-lg">RM 650 / bulan</span>
+          <span class="text-emeraldDeep/75">Pendaftaran Tahunan, Kitab &amp; Takaful:</span>
+          <span class="font-semibold text-walnutBrown text-right">RM 1,150 / tahun</span>
+        `;
+      } else {
+        box.innerHTML = `
+          <span class="text-emeraldDeep/75">Tajaan Biasiswa Tabung Wakaf Al-Hashimi:</span>
+          <span class="font-bold text-emeraldDeep text-right font-editorial text-lg">Tajaan 50% – 100%</span>
+          <span class="text-emeraldDeep/75">Kelayakan:</span>
+          <span class="font-semibold text-walnutBrown text-right">Anak Yatim / Asnaf / Hafazan Cemerlang</span>
+        `;
+      }
+    }
+
+    /* 4. MODALS & MOBILE MENU CONTROLS */
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) menu.classList.toggle('hidden');
+    }
+
+    function openModal(id) {
+      closeAllModals();
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeAllModals() {
+      ['modal-apply', 'modal-visit', 'modal-waqf'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.classList.add('hidden');
+          el.classList.remove('flex');
+        }
+      });
+    }
+
+    const WHATSAPP_NUMBER = '60193887120';
+    const FORM_TITLES = {
+      'fb-apply': 'Permohonan Pelajar Baharu 2027',
+      'fb-visit': 'Tempahan Lawatan Kampus',
+      'fb-waqf': 'Makluman Sumbangan Wakaf',
+    };
+
+    function submitForm(event, feedbackId) {
+      event.preventDefault();
+      const lines = [FORM_TITLES[feedbackId]];
+      event.target.querySelectorAll('input, select').forEach(field => {
+        const label = field.parentElement.querySelector('label');
+        lines.push(label.textContent.replace('*', '').trim() + ': ' + field.value);
+      });
+      if (feedbackId === 'fb-waqf') {
+        lines.push('Jumlah: ' + document.getElementById('waqf-val-label').textContent);
+      }
+      const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+      const fb = document.getElementById(feedbackId);
+      fb.querySelector('a').href = url;
+      fb.classList.remove('hidden');
+      window.open(url, '_blank', 'noopener');
+    }
+
+    function chooseWaqf(btn, amount) {
+      document.querySelectorAll('.waqf-choice').forEach(b => {
+        b.className = 'waqf-choice py-2.5 bg-white border border-emeraldDeep/25 text-emeraldDeep text-xs font-bold';
+      });
+      btn.className = 'waqf-choice py-2.5 bg-emeraldDeep text-warmIvory text-xs font-bold';
+      const label = document.getElementById('waqf-val-label');
+      if (label) label.textContent = amount;
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAllModals();
+    });
+
+    /* 5. INITIALIZE ON LOAD */
+    window.onload = function () {
+      renderPillarContent();
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
+    };
+  </script>
+</body>
+</html>
